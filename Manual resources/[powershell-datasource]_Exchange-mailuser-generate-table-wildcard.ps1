@@ -19,7 +19,7 @@ try{
     $sessionOption = New-PSSessionOption  @SessionOptionParams 
 
     $sessionParams = @{        
-        Authentication = 'Kerberos' 
+        Authentication = $ExchangeAuthentication 
         ConfigurationName = 'Microsoft.Exchange' 
         ConnectionUri = $ExchangeConnectionUri 
         Credential = $adminCredential        

@@ -1,0 +1,135 @@
+[
+    {
+        "label":  "Search",
+        "fields":  [
+                       {
+                           "key":  "searchMailbox",
+                           "templateOptions":  {
+                                                   "label":  "Search Mailuser",
+                                                   "required":  true
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Hide element",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "gridMailuser",
+                           "templateOptions":  {
+                                                   "label":  "Mailuser",
+                                                   "required":  false,
+                                                   "grid":  {
+                                                                "columns":  [
+                                                                                {
+                                                                                    "headerName":  "Alias",
+                                                                                    "field":  "Alias"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "User Principal Name",
+                                                                                    "field":  "UserPrincipalName"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Distinguished Name",
+                                                                                    "field":  "DistinguishedName"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Display Name",
+                                                                                    "field":  "DisplayName"
+                                                                                }
+                                                                            ],
+                                                                "height":  300,
+                                                                "rowSelection":  "single"
+                                                            },
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_0",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "searchMailuser",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "searchMailbox"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useFilter":  true,
+                                                   "useDefault":  false
+                                               },
+                           "type":  "grid",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  true
+                       }
+                   ]
+    },
+    {
+        "label":  "Devices",
+        "fields":  [
+                       {
+                           "key":  "devicelist",
+                           "templateOptions":  {
+                                                   "label":  "ActiveSyncDevices",
+                                                   "required":  false,
+                                                   "filterable":  false,
+                                                   "useDataSource":  true,
+                                                   "dualList":  {
+                                                                    "options":  [
+                                                                                    {
+                                                                                        "guid":  "75ea2890-88f8-4851-b202-626123054e14",
+                                                                                        "Name":  "Apple"
+                                                                                    },
+                                                                                    {
+                                                                                        "guid":  "0607270d-83e2-4574-9894-0b70011b663f",
+                                                                                        "Name":  "Pear"
+                                                                                    },
+                                                                                    {
+                                                                                        "guid":  "1ef6fe01-3095-4614-a6db-7c8cd416ae3b",
+                                                                                        "Name":  "Orange"
+                                                                                    }
+                                                                                ],
+                                                                    "optionKeyProperty":  "DeviceId",
+                                                                    "optionDisplayProperty":  "FriendlyName",
+                                                                    "labelLeft":  "Allowed devices",
+                                                                    "labelRight":  "Blocked devices"
+                                                                },
+                                                   "destinationDataSourceConfig":  {
+                                                                                       "dataSourceGuid":  "$dataSourceGuid_1",
+                                                                                       "input":  {
+                                                                                                     "propertyInputs":  [
+                                                                                                                            {
+                                                                                                                                "propertyName":  "selecteduser",
+                                                                                                                                "otherFieldValue":  {
+                                                                                                                                                        "otherFieldKey":  "gridMailuser"
+                                                                                                                                                    }
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                 }
+                                                                                   },
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_2",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "selecteduser",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "gridMailuser"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        }
+                                               },
+                           "type":  "duallist",
+                           "summaryVisibility":  "Show",
+                           "sourceDataSourceIdentifierSuffix":  "source-datasource",
+                           "destinationDataSourceIdentifierSuffix":  "destination-datasource",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       }
+                   ]
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "key":  "DeviceAccessState",
+        "type":  0
+    },
+    {
+        "key":  "DeviceType",
+        "type":  0
+    },
+    {
+        "key":  "FriendlyName",
+        "type":  0
+    },
+    {
+        "key":  "DeviceId",
+        "type":  0
+    }
+]
